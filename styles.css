@@ -1,0 +1,220 @@
+/* Основной сброс */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+  height: 100%;
+}
+
+.screen {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.screen.active {
+  display: block;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.main-bg {
+  background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmkwc3F0Z3A4ZWs5ZG9reGN3cHU1NHFuNTIwcmg0Z3E4a3VpZ2psbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o2Znx7WTbUifDC8ubX/giphy.gif');
+}
+
+.arena-bg {
+  background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnViYnFoeWZ2Mjk3c2FmNXVvNDFmaGg2dTl3dm8zY3B6a2tmcmlubSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OzszgDwPxu3NPA8sW7/giphy.gif');
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.title {
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.start-btn {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.exit-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.enemy-block {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.enemy-block img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.hp-bar {
+  max-width: 160px;
+}
+
+.actions {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.action-btn {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.player-ui {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  z-index: 2;
+}
+
+.shield {
+  width: 40px;
+  margin-bottom: 6px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.end {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  display: flex;
+}
+
+.end-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  animation: fadein 0.6s ease;
+}
+
+.end-image {
+  position: relative;
+  z-index: 2;
+  max-width: 300px;
+  margin-bottom: 20px;
+  animation: zoomin 0.6s ease;
+}
+
+#backToMenu {
+  position: relative;
+  z-index: 2;
+  padding: 12px 24px;
+  font-size: 18px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#backToMenu:hover {
+  background: #eee;
+}
+
+/* ЭФФЕКТ: враг трясётся при ударе */
+@keyframes shake {
+  0%, 100% { transform: translate(-50%, 0); }
+  20% { transform: translate(-51%, 2px); }
+  40% { transform: translate(-49%, -2px); }
+  60% { transform: translate(-50%, 2px); }
+  80% { transform: translate(-50%, -2px); }
+}
+.enemy-hit {
+  animation: shake 0.4s ease;
+}
+
+/* ЭФФЕКТ: красная вспышка на экране */
+.red-flash {
+  box-shadow: inset 0 0 100px red;
+  transition: box-shadow 0.3s ease;
+}
+
+/* ЭФФЕКТЫ победы/поражения */
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zoomin {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 600px) {
+  .action-btn {
+    width: 60px;
+  }
+  .start-btn {
+    width: 160px;
+  }
+  .hp-bar {
+    max-width: 120px;
+  }
+}

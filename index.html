@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мини-битва</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Музыка -->
+  <audio id="music-main" src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%84%D0%BE%D0%BD%20%D0%BC%D0%B5%D0%BD%D1%8E.mp3" loop></audio>
+  <audio id="music-arena" src="https://uploads.onecompiler.io/43n9hghfn/43qt3cr54/battle-of-the-dragons-8037.mp3" loop></audio>
+  <audio id="sound-hit" src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%83%D0%B4%D0%B0%D1%80.mp3"></audio>
+  <audio id="sound-heal" src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%85%D0%B8%D0%BB2.mp3"></audio>
+  <audio id="sound-defend" src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0.mp3"></audio>
+
+  <!-- Главный экран -->
+  <section id="main-screen" class="screen active">
+    <div class="background main-bg"></div>
+    <div class="centered">
+      <img src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/53729a82-c42e-406e-ae4d-7e46fc6c3281.png" alt="Заголовок" class="title">
+      <img src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/1691656755_grizly-club-p-kartinki-knopka-igrat-bez-fona-52.png" alt="Начать бой" class="start-btn hover-scale" id="startGame">
+    </div>
+  </section>
+
+  <!-- Арена -->
+  <section id="arena-screen" class="screen">
+    <div class="background arena-bg"></div>
+    <div class="exit-btn" id="exitBtn">✕</div>
+
+    <div class="enemy-block">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmN5ZTY0dGhyamx2ZWE1cGcxY3N0aHl1M3YwdTVjanNiZnJvOWppOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8XfQJ0ddATPwl8i8FX/giphy.gif" id="enemy" alt="Враг">
+      <img src="images/enemy-hp-6.png" id="enemyHp" class="hp-bar" alt="ХП врага">
+    </div>
+
+    <div class="actions">
+      <img src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%B0%D0%BF%D0%B0%D0%B0%D0%B0%D0%B0.png" alt="Атака" class="action-btn hover-scale" data-action="attack">
+      <img src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2.png" alt="Защита" class="action-btn hover-scale" data-action="defend">
+      <img src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2%D0%B2.png" alt="Исцеление" class="action-btn hover-scale" data-action="heal">
+    </div>
+
+    <div class="player-ui">
+      <img src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/foni-papik-pro-lyfs-p-kartinki-shchenyachii-patrul-shchit-na-pro-2.png" alt="Щит" id="shieldIcon" class="shield hidden">
+      <img src="images/player-hp-6.png" id="playerHp" class="hp-bar" alt="ХП игрока">
+    </div>
+  </section>
+
+  <!-- Результат боя -->
+  <div id="end-screen" class="end hidden">
+    <div class="end-overlay"></div>
+    <img id="endImage" src="https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-07-14%20051911.png" class="end-image" alt="Результат">
+    <button id="backToMenu">На главную</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
