@@ -28,19 +28,19 @@ let shieldActive = false;
 
 // Прямые ссылки на изображения HP
 const playerHpImages = {
-  6: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%80%D1%80%D1%80%D1%80%D1%80%D1%80%D1%80%D1%80%D1%80%D1%80.jpeg",
-  5: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%B4%D0%BB.jpeg",
-  4: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%8D%D1%8D%D1%8D%D1%8D%D1%8D%D1%8D%D1%8D%D1%8D%D1%8D%D1%8D.jpeg",
-  3: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82%D1%82.jpeg",
-  2: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D0%BE%D1%82%D0%BE%D1%82%D0%BE%D1%82.jpeg",
-  1: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/images.jpeg"
+  6: "https://i.postimg.cc/FKgMYD9q/image.jpg",
+  5: "https://i.postimg.cc/1zQxRLZw/image.jpg",
+  4: "https://i.postimg.cc/76Hp00hL/image.jpg",
+  3: "https://i.postimg.cc/76Hp00hL/image.jpg",
+  2: "https://i.postimg.cc/6pRJXBFB/image.jpg",
+  1: "https://i.postimg.cc/m2KfJPXd/images.jpg"
 };
 
 const enemyHpImages = {
-  4: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%D1%82%D0%BE%D1%82%D0%BE%D1%82%D0%BE%D0%BE%D0%BE%D1%82%D0%BE%D1%82%D0%BE.png",
-  3: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%BE%D1%80%D0%BE%D1%80%D0%BE%D1%80%D0%BE%D1%80.png",
-  2: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C%D1%8C.png",
-  1: "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4%D0%B4.png"
+  4: "https://i.postimg.cc/VNY7V18G/image.png",
+  3: "https://i.postimg.cc/W4X9RKp2/image.png",
+  2: "https://i.postimg.cc/vBK3TV6k/image.png",
+  1: "https://i.postimg.cc/FRzThZ10/image.png"
 };
 
 // Обновление изображений ХП
@@ -155,7 +155,8 @@ function enemyAttack() {
 
 function endBattle(victory) {
   endImage.src = victory
-    ? "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg"
-    : "https://uploads.onecompiler.io/43n9hghfn/43qm5kr8d/images.png";
+    ? "https://i.postimg.cc/BQSXbVJW/image.jpg"
+    : "https://i.postimg.cc/qq0Xzxvm/images.png";
   endScreen.classList.remove("hidden");
 }
+
